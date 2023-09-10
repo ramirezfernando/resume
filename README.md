@@ -1,2 +1,2 @@
-# resume
-Fernando Ramirez's Resume
+# Fernando Ramirez's Resume
+Look at my resume!
