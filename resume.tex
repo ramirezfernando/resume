@@ -4,7 +4,6 @@
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -51,7 +50,7 @@
 \pdfgentounicode=1
 
 %----------FONT----------
-\include{commands/commands}
+\include{src/commands/commands.tex}
 
 
 %%%%%%  RESUME STARTS HERE  %%%%%
@@ -59,19 +58,19 @@
 %-------------------------------------------
 
 %----------HEADING----------
-\input{components/education.tex}
+\input{src/components/heading.tex}
 
 %-----------EDUCATION-----------
-\input{src/education.tex}
+\input{src/components/education.tex}
 
 %-----------EXPERIENCE-----------
-\input{src/experience.tex}
+\input{src/components/experience.tex}
 
 %-----------PROJECTS-----------
-\input{src/projects.tex}
+\input{src/components/projects.tex}
 
 %-----------SKILLS-----------
-\input{src/skills.tex}
+\input{src/components/skills.tex}
 
 %-------------------------------------------
 \end{document}
