@@ -1,2 +1,2 @@
 # Fernando Ramirez's Resume
-Look at my resume!
+![resume](resume.png)
