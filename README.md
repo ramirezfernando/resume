@@ -1,2 +1,2 @@
 # Fernando Ramirez's Resume
-![resume](resume.png)
+![resume](Fernando_Ramirez_Resume.png)
