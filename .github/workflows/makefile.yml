@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: brew install pdflatex imagemagick
+      run: brew install basictex imagemagick
 
     - name: Run all
       run: make all
