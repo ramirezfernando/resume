@@ -9,13 +9,13 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: sudo apt-get install pdflatex imagemagick
+      run: brew install pdflatex imagemagick
 
     - name: Run all
       run: make all
