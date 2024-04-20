@@ -1,4 +1,4 @@
-all: pdf png
+resume: pdf png
 
 pdf:
 	pdflatex Fernando_Ramirez_Resume.tex
