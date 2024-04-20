@@ -1,24 +1,30 @@
-name: Makefile CI
+name: Build Resume
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
+
   build:
-
-    runs-on: macos-latest
-
+    runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
+    
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make texlive-full ghostscript
 
-    - name: Install MacTeX (no GUI) # Required for pdflatex
-      run: brew install --cask mactex-no-gui
-
-    - name: Install ImageMagick
-      run: brew install imagemagick
-
-    - name: Run all
+    - name: Build Resume
       run: make all
+      
+    - uses: actions/upload-artifact@v2
+      with:
+        name: resume-artifacts
+        path: |
+          *.pdf
+          *.png
